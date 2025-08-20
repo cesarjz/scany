@@ -83,7 +83,7 @@ linters-settings:
   gocyclo:
     min-complexity: 15
   goimports:
-    local-prefixes: github.com/georgysavva/scany
+    local-prefixes: github.com/cesarjz/scany
   gomnd:
     settings:
       mnd:

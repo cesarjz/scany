@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"strings"
 
-	"github.com/georgysavva/scany/v2/dbscan"
-	"github.com/georgysavva/scany/v2/sqlscan"
+	"github.com/cesarjz/scany/dbscan"
+	"github.com/cesarjz/scany/sqlscan"
 )
 
 func ExampleSelect() {

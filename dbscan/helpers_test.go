@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/georgysavva/scany/v2/dbscan"
-	"github.com/georgysavva/scany/v2/pgxscan"
+	"github.com/cesarjz/scany/dbscan"
+	"github.com/cesarjz/scany/pgxscan"
 )
 
 type testModel struct {

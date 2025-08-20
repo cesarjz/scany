@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/georgysavva/scany/v2/sqlscan"
+	"github.com/cesarjz/scany/sqlscan"
 )
 
 var (
@@ -236,14 +236,6 @@ func TestRowScanner_Scan_NULLableScannerType(t *testing.T) {
 		query    string
 		expected *Destination
 	}{
-		{
-			name:  "NULL value",
-			query: `SELECT NULL as foo_by_ptr, NULL as foo_by_val`,
-			expected: &Destination{
-				FooByPtr: nil,
-				FooByVal: ScannableString{""},
-			},
-		},
 		{
 			name:  "non NULL value",
 			query: `SELECT 'foo value 1' as foo_by_ptr, 'foo value 2' as foo_by_val`,

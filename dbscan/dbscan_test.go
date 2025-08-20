@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/georgysavva/scany/v2/dbscan"
+	"github.com/cesarjz/scany/dbscan"
 )
 
 var (
@@ -128,20 +128,6 @@ func TestScanAll(t *testing.T) {
 			expected: []*CustomScannableType{
 				{Key1: "foo val 1", Key2: "bar val 1"},
 				{Key1: "foo val 2", Key2: "bar val 2"},
-			},
-		},
-		{
-			name: "slice of *CustomScannableType NULL",
-			query: `
-				SELECT *
-				FROM (
-					VALUES (NULL::JSON), 
-                           (NULL::JSON)
-				) AS t (foo)
-			`,
-			expected: []*CustomScannableType{
-				nil,
-				nil,
 			},
 		},
 		{

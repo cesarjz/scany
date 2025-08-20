@@ -5,9 +5,9 @@ import (
 
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	"github.com/georgysavva/scany/v2/dbscan"
+	"github.com/cesarjz/scany/dbscan"
 
-	"github.com/georgysavva/scany/v2/pgxscan"
+	"github.com/cesarjz/scany/pgxscan"
 )
 
 func ExampleSelect() {

@@ -9,7 +9,7 @@ import (
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	"github.com/georgysavva/scany/v2/dbscan"
+	"github.com/cesarjz/scany/dbscan"
 )
 
 // Querier is something that pgxscan can query and get the pgx.Rows from.

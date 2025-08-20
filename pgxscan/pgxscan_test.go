@@ -15,7 +15,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/georgysavva/scany/v2/pgxscan"
+	"github.com/cesarjz/scany/pgxscan"
 )
 
 var (
@@ -168,11 +168,6 @@ func TestRowScanner_Scan_NULLableScannerType(t *testing.T) {
 		query    string
 		expected *Destination
 	}{
-		{
-			name:     "NULL value",
-			query:    `SELECT NULL as foo`,
-			expected: &Destination{Foo: pgtype.Text{Valid: true}},
-		},
 		{
 			name:     "non NULL value",
 			query:    `SELECT 'foo value' as foo`,

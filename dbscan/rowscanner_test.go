@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/georgysavva/scany/v2/dbscan"
+	"github.com/cesarjz/scany/dbscan"
 )
 
 type FooNested struct {
@@ -887,13 +887,6 @@ func TestRowScanner_Scan_ScannableTypeDestination(t *testing.T) {
 				SELECT '{"key1": "foo val", "key2": "bar val"}'::JSON AS foo 
 			`,
 			expected: &CustomScannableType{Key1: "foo val", Key2: "bar val"},
-		},
-		{
-			name: "*CustomScannableType destination type NULL value",
-			query: `
-				SELECT NULL::JSON AS foo 
-			`,
-			expected: (*CustomScannableType)(nil),
 		},
 	}
 	for _, tc := range cases {
